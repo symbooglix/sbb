@@ -8948,7 +8948,7 @@ $bb0:
   $exn := false;
   return;
 }
-procedure time_diff(now: int, then: int)
+procedure time_diff(now: int, $then: int)
   returns ($r: int)
   modifies $Alloc, $CurrAddr, $exn, $exnv, $M.0, $M.1, $M.2, $M.3, $M.4, $M.5, $M.6, $M.7, $M.8, $M.9, $M.10, $M.11, $M.12, $M.13, $M.14, $M.15, $M.16, $M.17, $M.18, $M.19, $M.20, $M.21, $M.22, $M.23, $M.24, $M.25, $M.26, $M.27, $M.28, $M.29, $M.30, $M.31, $M.32, $M.33, $M.34, $M.35, $M.36, $M.37, $M.38, $M.39, $M.40, $M.41, $M.42;
 {
@@ -8968,13 +8968,13 @@ procedure time_diff(now: int, then: int)
   var $p9: int;
 $bb0:
   call {:cexpr "now"} boogie_si_record_int(now);
-  call {:cexpr "then"} boogie_si_record_int(then);
+  call {:cexpr "$then"} boogie_si_record_int($then);
   assume {:sourceloc "/work/ldvuser/mutilin/launch/work/current--X--drivers--X--defaultlinux-3.16-rc1.tar.xz--X--43_2a--X--cpachecker/linux-3.16-rc1.tar.xz/csd_deg_dscv/9341/dscv_tempdir/dscv/ri/43_2a/drivers/gpu/drm/via/via_irq.o.c.prepared", 140, 3} true;
   $p0 := $pa($pa(now, 0, 16), 8, 1);
   assume {:sourceloc "/work/ldvuser/mutilin/launch/work/current--X--drivers--X--defaultlinux-3.16-rc1.tar.xz--X--43_2a--X--cpachecker/linux-3.16-rc1.tar.xz/csd_deg_dscv/9341/dscv_tempdir/dscv/ri/43_2a/drivers/gpu/drm/via/via_irq.o.c.prepared", 140, 3} true;
   $p1 := $M.0[$p0];
   assume {:sourceloc "/work/ldvuser/mutilin/launch/work/current--X--drivers--X--defaultlinux-3.16-rc1.tar.xz--X--43_2a--X--cpachecker/linux-3.16-rc1.tar.xz/csd_deg_dscv/9341/dscv_tempdir/dscv/ri/43_2a/drivers/gpu/drm/via/via_irq.o.c.prepared", 140, 3} true;
-  $p2 := $pa($pa(then, 0, 16), 8, 1);
+  $p2 := $pa($pa($then, 0, 16), 8, 1);
   assume {:sourceloc "/work/ldvuser/mutilin/launch/work/current--X--drivers--X--defaultlinux-3.16-rc1.tar.xz--X--43_2a--X--cpachecker/linux-3.16-rc1.tar.xz/csd_deg_dscv/9341/dscv_tempdir/dscv/ri/43_2a/drivers/gpu/drm/via/via_irq.o.c.prepared", 140, 3} true;
   $p3 := $M.0[$p2];
   assume {:sourceloc "/work/ldvuser/mutilin/launch/work/current--X--drivers--X--defaultlinux-3.16-rc1.tar.xz--X--43_2a--X--cpachecker/linux-3.16-rc1.tar.xz/csd_deg_dscv/9341/dscv_tempdir/dscv/ri/43_2a/drivers/gpu/drm/via/via_irq.o.c.prepared", 140, 3} true;
@@ -8986,7 +8986,7 @@ $bb0:
   assume {:sourceloc "/work/ldvuser/mutilin/launch/work/current--X--drivers--X--defaultlinux-3.16-rc1.tar.xz--X--43_2a--X--cpachecker/linux-3.16-rc1.tar.xz/csd_deg_dscv/9341/dscv_tempdir/dscv/ri/43_2a/drivers/gpu/drm/via/via_irq.o.c.prepared", 140, 3} true;
   $p7 := $trunc($p6, 32);
   assume {:sourceloc "/work/ldvuser/mutilin/launch/work/current--X--drivers--X--defaultlinux-3.16-rc1.tar.xz--X--43_2a--X--cpachecker/linux-3.16-rc1.tar.xz/csd_deg_dscv/9341/dscv_tempdir/dscv/ri/43_2a/drivers/gpu/drm/via/via_irq.o.c.prepared", 140, 3} true;
-  $p8 := $pa($pa(then, 0, 16), 8, 1);
+  $p8 := $pa($pa($then, 0, 16), 8, 1);
   assume {:sourceloc "/work/ldvuser/mutilin/launch/work/current--X--drivers--X--defaultlinux-3.16-rc1.tar.xz--X--43_2a--X--cpachecker/linux-3.16-rc1.tar.xz/csd_deg_dscv/9341/dscv_tempdir/dscv/ri/43_2a/drivers/gpu/drm/via/via_irq.o.c.prepared", 140, 3} true;
   $p9 := $M.0[$p8];
   assume {:sourceloc "/work/ldvuser/mutilin/launch/work/current--X--drivers--X--defaultlinux-3.16-rc1.tar.xz--X--43_2a--X--cpachecker/linux-3.16-rc1.tar.xz/csd_deg_dscv/9341/dscv_tempdir/dscv/ri/43_2a/drivers/gpu/drm/via/via_irq.o.c.prepared", 140, 3} true;
